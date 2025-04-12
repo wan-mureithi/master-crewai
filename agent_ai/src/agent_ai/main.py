@@ -18,7 +18,7 @@ def run():
     """
     Run the crew.
     """
-    inputs = {"topic": "AI LLMs", "current_year": str(datetime.now().year)}
+    inputs = {"topic": "AI LLMs", "date": datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}
 
     try:
         AgentAi().crew().kickoff(inputs=inputs)
